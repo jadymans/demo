@@ -65,6 +65,7 @@ curl --location --request POST 'http://localhost:8096/demo-service/member/save' 
 <p align="left">
   <img src="image/get_all_member_flow.png" width="600"/>
 </p>
+
 ```
 curl --location --request GET 'http://localhost:8096/demo-service/member/'
 ```
@@ -73,6 +74,7 @@ curl --location --request GET 'http://localhost:8096/demo-service/member/'
 <p align="left">
   <img src="image/get_member_by_username.png" width="600"/>
 </p>
+
 ```
 curl --location --request GET 'http://localhost:8096/demo-service/member/get?username=jadymans'
 ```
