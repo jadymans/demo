@@ -29,6 +29,9 @@ username : sa
 password : password1234!
 schemas  : demo-db
 ```
+<p align="left">
+  <img src="image/member_tbl.png" width="600"/>
+</p>
 
 ### Executing program
 
