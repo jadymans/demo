@@ -50,7 +50,7 @@ mvn spring-boot:run
 #### Registration api
 
 ```
-curl --location --request POST 'http://localhost:8096/Demo-Project/member/saveMember' \
+curl --location --request POST 'http://localhost:8096/demo-service/member/save' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "username":"testmember119",
@@ -62,11 +62,14 @@ curl --location --request POST 'http://localhost:8096/Demo-Project/member/saveMe
 ```
 
 #### Get all member api
+<p align="left">
+  <img src="image/get_all_member_flow.png" width="600"/>
+</p>
 ```
-curl --location --request GET 'http://localhost:8096/Demo-Project/member/'
+curl --location --request GET 'http://localhost:8096/demo-service/member/'
 ```
 
 #### Get all member api
 ```
-curl --location --request GET 'http://localhost:8096/Demo-Project/member/get?username=jadymans'
+curl --location --request GET 'http://localhost:8096/demo-service/member/get?username=jadymans'
 ```
