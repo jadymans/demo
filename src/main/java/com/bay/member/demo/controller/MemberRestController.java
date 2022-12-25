@@ -2,8 +2,7 @@ package com.bay.member.demo.controller;
 
 import com.bay.member.demo.bean.request.SaveMemberRequest;
 import com.bay.member.demo.bean.response.MemberRestResponse;
-import com.bay.member.demo.component.MemberComponent;
-import com.bay.member.demo.constant.DemoConstant;
+import com.bay.member.demo.service.MemberComponent;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import lombok.var;
@@ -70,7 +69,7 @@ public class MemberRestController {
         }
     }
 
-    @PostMapping("/saveMember")
+    @PostMapping("/save")
     public ResponseEntity<MemberRestResponse> registerMember(@RequestBody SaveMemberRequest request) {
         try {
             if (isEmpty(request.getUsername())

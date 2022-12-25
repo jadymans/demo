@@ -1,4 +1,4 @@
-package com.bay.member.demo.component;
+package com.bay.member.demo.service;
 
 import com.bay.member.demo.bean.request.SaveMemberRequest;
 import com.bay.member.demo.bean.response.MemberRestResponse;
@@ -8,6 +8,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import lombok.var;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import javax.persistence.NoResultException;
 
@@ -23,7 +24,7 @@ import static com.bay.member.demo.constant.DemoConstant.SuccessStatus.SUCCESS;
 import static org.apache.commons.lang3.ObjectUtils.isEmpty;
 
 @Slf4j
-@Component
+@Service
 @RequiredArgsConstructor
 public class MemberComponent {
 

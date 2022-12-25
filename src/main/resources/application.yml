@@ -19,7 +19,7 @@ spring:
 server:
   port: 8096
   servlet:
-    context-path: /Demo-Project
+    context-path: /demo-service
     session:
       timeout: 30000
   ssl:
