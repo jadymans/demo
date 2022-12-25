@@ -2,7 +2,7 @@ package com.bay.member.demo.controller;
 
 import com.bay.member.demo.bean.request.SaveMemberRequest;
 import com.bay.member.demo.bean.response.MemberRestResponse;
-import com.bay.member.demo.service.MemberComponent;
+import com.bay.member.demo.service.MemberService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import lombok.var;
@@ -23,13 +23,13 @@ import static org.apache.commons.lang3.ObjectUtils.isEmpty;
 @RequestMapping("member")
 public class MemberRestController {
 
-    private final MemberComponent memberComponent;
+    private final MemberService memberService;
 
     @GetMapping("") // Get All Member
     public ResponseEntity<MemberRestResponse> getAll() {
         try {
             return ResponseEntity.status(HttpStatus.OK)
-                    .body(memberComponent.getMember());
+                    .body(memberService.getMember());
 
         } catch (Exception e) {
             log.error("Get Member Fail : {}", e.getMessage());
@@ -47,7 +47,7 @@ public class MemberRestController {
         try {
 //            TODO: test username = null
 
-            return ResponseEntity.status(HttpStatus.OK).body(memberComponent.getMember(username));
+            return ResponseEntity.status(HttpStatus.OK).body(memberService.getMember(username));
 
         } catch (NoResultException noResultException) {
             log.error(noResultException.getMessage());
@@ -92,7 +92,7 @@ public class MemberRestController {
                         );
             }
 
-            var memberRestResponse = memberComponent.saveMember(request);
+            var memberRestResponse = memberService.saveMember(request);
             return ResponseEntity.status(HttpStatus.OK)
                     .body(memberRestResponse);
 

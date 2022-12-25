@@ -7,7 +7,6 @@ import com.bay.member.demo.repository.MemberRepo;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import lombok.var;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.NoResultException;
@@ -26,7 +25,7 @@ import static org.apache.commons.lang3.ObjectUtils.isEmpty;
 @Slf4j
 @Service
 @RequiredArgsConstructor
-public class MemberComponent {
+public class MemberService {
 
     private final MemberRepo memberRepo;
 
@@ -68,7 +67,7 @@ public class MemberComponent {
             var member = Member.builder()
                     .username(request.getUsername())
                     .password(request.getPassword())
-                    .address(request.getPassword())
+                    .address(request.getAddress())
                     .phone(phoneNo)
                     .salary(salary)
                     .referenceCode(getRefCode(phoneNo))
