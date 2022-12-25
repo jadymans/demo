@@ -94,7 +94,7 @@ public class MemberRestController {
             }
 
             var memberRestResponse = memberComponent.saveMember(request);
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+            return ResponseEntity.status(HttpStatus.OK)
                     .body(memberRestResponse);
 
         } catch (Exception exception) {
