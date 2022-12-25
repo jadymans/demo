@@ -70,6 +70,9 @@ curl --location --request GET 'http://localhost:8096/demo-service/member/'
 ```
 
 #### Get all member api
+<p align="left">
+  <img src="image/get_member_by_username.png" width="600"/>
+</p>
 ```
 curl --location --request GET 'http://localhost:8096/demo-service/member/get?username=jadymans'
 ```
