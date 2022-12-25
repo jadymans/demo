@@ -71,7 +71,7 @@ public class MemberRestController {
     }
 
     @PostMapping("/saveMember")
-    public ResponseEntity<MemberRestResponse> getByUsername(@RequestBody SaveMemberRequest request) {
+    public ResponseEntity<MemberRestResponse> registerMember(@RequestBody SaveMemberRequest request) {
         try {
             if (isEmpty(request.getUsername())
                     || isEmpty(request.getPassword())
