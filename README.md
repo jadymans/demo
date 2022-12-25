@@ -18,7 +18,7 @@ $ docker-compose up -d
 ```
 3. wait 90 second for initial Database after that make sure The database is ready to use
 <p align="left">
-  <img src="images/docker-dashboard.png" width="200"/>
+  <img src="image/docker-dashboard.png" width="600"/>
 </p>
 
  Connect to database
