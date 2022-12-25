@@ -47,7 +47,10 @@ mvn spring-boot:run
 
 ## Api
 
-#### Registration api
+#### Registration api 
+<p align="left">
+  <img src="image/save_flow.png" width="600"/>
+</p>
 
 ```
 curl --location --request POST 'http://localhost:8096/demo-service/member/save' \
